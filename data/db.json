@@ -1,0 +1,20 @@
+{
+    "items":[
+    {
+      "id": 1,
+      "item": "Learn Something Daily",
+      "checked": false
+    },
+    {
+      "id": 2,
+      "item": "Practice It Regularly",
+      "checked": false
+    },
+    {
+      "id": 3,
+      "item": "Grow Consistently",
+      "checked": true
+    }
+  ]
+}
+  
