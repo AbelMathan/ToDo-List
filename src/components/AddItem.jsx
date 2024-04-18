@@ -19,7 +19,7 @@ const AddItem = ({ newItem, setNewItem, handleForm }) => {
           <button
             type="submit"
             onClick={() => inputRef.current.focus()}
-            className="add px-5 bg-green-500 cursor-pointer  ml-2 w-24 p-1 rounded-r-full drop-shadow-lg "
+            className="add px-5 bg-green-500 hover:bg-green-600 cursor-pointer  ml-2 w-24 p-1 rounded-r-full drop-shadow-lg "
           >
             Add
           </button>

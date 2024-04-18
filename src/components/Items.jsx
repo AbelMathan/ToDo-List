@@ -42,22 +42,22 @@ const Items = ({ items, setItems, handleCheck, handleRemove }) => {
 
   return (
     <section className="flex justify-center relative drop-shadow-lg ">
-      <main className="bg-gray-200 w-80 sm:w-1/3 relative flex justify-center ">
+      <main className="bg-gray-50 w-80 md:w-[600px] relative flex justify-center ">
         {items.length ? (
           <div className="ToDos w-72 sm:w-[80%] p-10 ">
             {items.map((item) => (
-              <div
-                className="ToDos flex gap-2 border-b-2  border-gray-300 pb-3 justify-between"
+              <article
+                className="ToDos flex gap-1 border-b-2  border-gray-300 pb-3 justify-between"
                 key={item.id}
               >
                 <input
                   type="checkbox"
                   onChange={() => handleCheck(item.id)}
                   checked={item.checked}
-                  className="w-4"
+                  className="w-4 cursor-pointer"
                 />
 
-                <div className="flex justify-between w-60 ">
+                <div className="flex justify-between w-72 ">
                   {editingItemId === item.id ? (
                     <>
                       <input
@@ -96,7 +96,7 @@ const Items = ({ items, setItems, handleCheck, handleRemove }) => {
                 <button onClick={() => handleRemove(item.id)}>
                   <img src={Trash} alt="del" className="ml-3" />
                 </button>
-              </div>
+              </article>
             ))}
           </div>
         ) : (

@@ -11,7 +11,7 @@ const Header = () => {
             alt="img"
             className="h-80 w-auto object-cover opacity-20 pb-20 "
           />
-          <h1 className="text-5xl absolute top-28 left-20 sm:left-1/4 text-white font-bold drop-shadow-md ">
+          <h1 className="text-5xl absolute top-28 w-full  text-center text-white font-bold drop-shadow-md ">
             ToDo List
           </h1>
         </div>

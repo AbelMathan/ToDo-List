@@ -50,13 +50,14 @@ function App() {
   };
 
   return (
-    <main className="w-full h-[727px] md:h-[737px] overflow-hidden bg-gray-100">
-      <div className="grid  grid-cols-3 gap-2 ">
-        <div className="col-start-1 col-end-4 relative sticky top-0">
+    <main className="w-full h-screen p-0 m-0">
+      <div className="flex flex-col justify-between h-screen ">
+        <div className="bg-white z-50  sticky top-0">
           <Header />
           <SearchItem search={search} setSearch={setSearch} />
         </div>
-        <div className="col-start-1 col-end-4 overflow-y-scroll h-[349px] -mt-6 mb-10">
+
+        <div className="h-auto w-full">
           <Items
             items={items.filter((item) =>
               item.item.toLowerCase().includes(search.toLowerCase())
@@ -67,7 +68,7 @@ function App() {
           />
         </div>
 
-        <div className="col-start-1 col-end-4 relative sticky bottom-0 ">
+        <div className=" bg-white pt-10 sticky bottom-0 ">
           <AddItem
             newItem={newItem}
             setNewItem={setNewItem}
