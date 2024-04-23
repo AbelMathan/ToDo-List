@@ -14,12 +14,12 @@ const AddItem = ({ newItem, setNewItem, handleForm }) => {
             placeholder="Add ToDo"
             onChange={(e) => setNewItem(e.target.value)}
             value={newItem}
-            className="input md:w-60 p-1 rounded-l-full drop-shadow-lg text-center"
+            className="input md:w-60 p-1 rounded-l-full drop-shadow-lg text-center border-[1px] "
           />
           <button
             type="submit"
             onClick={() => inputRef.current.focus()}
-            className="add px-5 bg-green-500 hover:bg-green-600 cursor-pointer  ml-2 w-24 p-1 rounded-r-full drop-shadow-lg "
+            className="add px-5 bg-green-500 hover:bg-green-600 cursor-pointer border-[1px ml-2 w-24 p-1 rounded-r-full drop-shadow-lg "
           >
             Add
           </button>
