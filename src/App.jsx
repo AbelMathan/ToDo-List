@@ -7,20 +7,22 @@ import SearchItem from "./components/SearchItem";
 import Footer from "./components/Footer";
 function App() {
   const [items, setItems] = useState(
-    JSON.parse(
-      localStorage.getItem("todo_list") || [
-        { id: 1, checked: false, item: "Add your todos" },
-      ]
-    )
+    JSON.parse(localStorage.getItem("todo_list"))
   );
 
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
 
-  // useEffect(() => {
-  //   const listItems = JSON.parse(localStorage.getItem("todo_list"));
-  //   setItems(listItems);
-  // }, [items]);
+  useEffect(() => {
+    const listItems = JSON.parse(
+      localStorage.setItem(
+        "todo_list",
+        JSON.stringify({ id: 1, checked: false, item: "Add your todos" }) ||
+          items
+      )
+    );
+    setItems(listItems);
+  }, []);
 
   // For List Operations
   const handleCheck = (id) => {
