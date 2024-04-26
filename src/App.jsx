@@ -15,11 +15,6 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
 
-  // useEffect(() => {
-  //   const listItems = JSON.parse(localStorage.getItem("todo_list"));
-  //   setItems(listItems);
-  // }, [items]);
-
   // For List Operations
   const handleCheck = (id) => {
     const listItems = items.map((item) =>
@@ -49,6 +44,8 @@ function App() {
     if (!newItem) return;
     addItem(newItem);
     setNewItem("");
+    setItems(listItems);
+    localStorage.setItem("todo_list", JSON.stringify(listItems));
   };
 
   return (

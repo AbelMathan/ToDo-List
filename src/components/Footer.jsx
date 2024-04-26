@@ -6,6 +6,7 @@ const Footer = ({ items, setItems }) => {
 
   const clearList = () => {
     setItems([]);
+    localStorage.setItem("todo_list", JSON.stringify([]));
   };
   return (
     <footer className=" flex justify-center relative bg-gray-800 h-10 p-2  ">
@@ -17,7 +18,6 @@ const Footer = ({ items, setItems }) => {
         onClick={clearList}
         className="bg-red-700 hover:bg-red-800 text-white rounded-full pr-2 pl-2  ml-5"
       >
-        {" "}
         Clear All
       </button>
     </footer>

@@ -28,6 +28,7 @@ const Items = ({ items, setItems, handleCheck, handleRemove }) => {
       );
       setItems(updatedItems);
       setEditingItemId(null);
+      localStorage.setItem("todo_list", JSON.stringify(updatedItems));
     } else {
       alert("Input field can't be empty");
       setEditingItemId(null);
